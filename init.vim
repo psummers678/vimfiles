@@ -54,9 +54,9 @@ nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
 "Plugin keyboard Mappings
-source ~/.vim/config/nerdtree
-source ~/.vim/config/airline.rc
-source ~/.vim/config/devicons.rc
-source ~/.vim/config/fugitive.rc
+source ~/.vim/config/nerdtree.vim
+source ~/.vim/config/airline.vim
+source ~/.vim/config/devicons.vim
+source ~/.vim/config/fugitive.vim
 "Plugin Configuration
 
