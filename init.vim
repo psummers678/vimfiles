@@ -11,14 +11,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-
+set nospell
 set nu	
 set rnu
 set showbreak=+++	
 set textwidth=144
 set colorcolumn=144
 set showmatch	
-set spell
 set visualbell	
 set hlsearch
 set smartcase	
