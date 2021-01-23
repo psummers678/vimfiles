@@ -1,7 +1,7 @@
-nmap <leader> nn :NERDTreeFind<CR>
+nmap <leader>nn :NERDTreeFind<CR>
 nmap <leader>Ex :NERDTree<CR>
 nmap <leader>nsb :bookmark<CR>
-nmap <leader> nb B<CR>
+nmap <leader>nb B<CR>
 
 let g:NERDTreeShowBookmarks=1 
 let g:NERDTreeShowLineNumbers=1 

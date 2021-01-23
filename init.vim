@@ -1,6 +1,5 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
-Plug 'valloric/youcompleteme'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdtree'
@@ -8,7 +7,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 
 Plug 'tpope/vim-fugitive'
-
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
@@ -58,14 +56,8 @@ nnoremap <Leader>- :vertical resize -5<CR>
 
 "Plugin keyboard Mappings
 source ~/.vim/config/nerdtree
-source ~/.vim/config/coc.rc
 source ~/.vim/config/airline.rc
 source ~/.vim/config/devicons.rc
 source ~/.vim/config/fugitive.rc
-source ~/.vim/config/youcompleteme.rc
 "Plugin Configuration
 
-
-
-
-autocmd VimEnter * if !args() | NERDTree | endif
