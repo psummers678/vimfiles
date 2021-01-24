@@ -58,5 +58,6 @@ source ~/.vim/config/nerdtree.vim
 source ~/.vim/config/airline.vim
 source ~/.vim/config/devicons.vim
 source ~/.vim/config/fugitive.vim
+source ~/.vim/config/coc.vim
 "Plugin Configuration
 
