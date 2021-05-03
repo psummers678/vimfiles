@@ -20,11 +20,6 @@ endif
 
 
 " GoTo code navigation.
-nmap <silent><leader> cd <Plug>(coc-definition)
-nmap <silent> cy <Plug>(coc-type-definition)
-nmap <silent> ci <Plug>(coc-implementation)
-nmap <silent> cr <Plug>(coc-references)
-nmap <leader>fo :call CocAction('format') <CR>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -37,3 +32,6 @@ function! s:show_documentation()
 endfunction
 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+
+nnoremap <leader>fo :call CocAction('format')<CR>

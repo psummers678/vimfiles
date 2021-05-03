@@ -3,12 +3,16 @@ call plug#begin('~/.vim/plugged')
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdtree'
-
 Plug 'vim-airline/vim-airline'
-
 Plug 'tpope/vim-fugitive'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+Plug 'vim-test/vim-test'
+
+"Plug 'mfussenegger/nvim-jdtls'
+
 call plug#end()
 
 set nospell
@@ -59,5 +63,8 @@ source ~/.vim/config/airline.vim
 source ~/.vim/config/devicons.vim
 source ~/.vim/config/fugitive.vim
 source ~/.vim/config/coc.vim
+source ~/.vim/config/fzf.vim
+source ~/.vim/config/vim-test.vim
+source ~/.vim/config/vim-rooter.vim
 "Plugin Configuration
 
