@@ -3,15 +3,19 @@
 working_dir=$(pwd)
 
 vim_config_dir=~/.vim/config
+text_vim_config_dir="~/.vim/config"
 
-mkdir $vim_config_dir -p
-mv ~/.vimrc ~/.vimrc.old
-cp $working_config_dir $vim_config_dir"
-if [ $EDITOR == "vim" ]
+echo $working_dir
+echo $vim_config_dir
+
+if [ $vim_config_dir == $working_dir ]
 then
-ln -s ${vim_config_dir}/.vimrc ~/.vimrc
-else if [ $EDITOR=="nvim" ]
-then
-	mkdir ~/.config/nvim
-	ln -s ${vim_config_dir}/init.vim ~/.config/nvim/init.vim
-fi
+    echo "In Correct Directory"
+else 
+    echo "In $working_dir not $vim_config_dir"
+fi 
+
+
+sed s?$text_vim_config_dir?$working_dir?g init.vim
+
+ln -s $vim_config_dir/init.vim ~/.config/nvim/init.vim
