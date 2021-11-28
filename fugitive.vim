@@ -6,3 +6,4 @@ nmap <leader>Gc :Git commit<CR>
 nmap <leader>Gd :Git diff HEAD<CR>
 nmap <leader>Gb :Git blame<CR>
 nmap <leader>Ga :Gwrite<CR>
+nmap <leader>GP :Git push<CR>
