@@ -10,9 +10,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'vim-test/vim-test'
-
-"Plug 'mfussenegger/nvim-jdtls'
-
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'SirVer/ultisnips'
 call plug#end()
 
 set nospell
@@ -46,7 +45,7 @@ let mapleader=' '
 
 ""Keyboard Mappings
 "General
-nmap <leader>src :w <bar>:source %<CR>
+nmap <leader>src :w <bar>:source ~/.vim/config/init.vim<CR>
 nmap <leader>vn :vsp<CR>
 nmap <leader>hn :sp<CR>
 nnoremap <leader>h :wincmd h<CR>
@@ -62,9 +61,9 @@ source ~/.vim/config/nerdtree.vim
 source ~/.vim/config/airline.vim
 source ~/.vim/config/devicons.vim
 source ~/.vim/config/fugitive.vim
-source ~/.vim/config/coc.vim
+"source ~/.vim/config/coc.vim
 source ~/.vim/config/fzf.vim
 source ~/.vim/config/vim-test.vim
 source ~/.vim/config/vim-rooter.vim
-"Plugin Configuration
-
+source ~/.vim/config/vim-go.vim
+source ~/.vim/config/ultisnips.vim
