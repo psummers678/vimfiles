@@ -1,4 +1,10 @@
 " - Avoid using standard Vim directory names like 'plugin'
+   let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -45,7 +51,7 @@ let mapleader=' '
 
 ""Keyboard Mappings
 "General
-nmap <leader>src :w <bar>:source ~/.vim/config/init.vim<CR>
+nmap <leader>src :w <bar>:source /home/psummers/vimfiles/init.vim<CR>
 nmap <leader>vn :vsp<CR>
 nmap <leader>hn :sp<CR>
 nnoremap <leader>h :wincmd h<CR>
@@ -57,13 +63,13 @@ nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
 "Plugin keyboard Mappings
-source ~/.vim/config/nerdtree.vim
-source ~/.vim/config/airline.vim
-source ~/.vim/config/devicons.vim
-source ~/.vim/config/fugitive.vim
-"source ~/.vim/config/coc.vim
-source ~/.vim/config/fzf.vim
-source ~/.vim/config/vim-test.vim
-source ~/.vim/config/vim-rooter.vim
-source ~/.vim/config/vim-go.vim
-source ~/.vim/config/ultisnips.vim
+source /home/psummers/vimfiles/nerdtree.vim
+source /home/psummers/vimfiles/airline.vim
+source /home/psummers/vimfiles/devicons.vim
+source /home/psummers/vimfiles/fugitive.vim
+"source /home/psummers/vimfiles/coc.vim
+source /home/psummers/vimfiles/fzf.vim
+source /home/psummers/vimfiles/vim-test.vim
+source /home/psummers/vimfiles/vim-rooter.vim
+source /home/psummers/vimfiles/vim-go.vim
+source /home/psummers/vimfiles/ultisnips.vim
